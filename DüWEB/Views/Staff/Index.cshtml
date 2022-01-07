@@ -1,0 +1,265 @@
+﻿@using DüWEB.Models
+@model List<Staff>
+
+<h1 class="bg-transparent">AKADEMİK PERSONEL</h1>
+@*<div class="card-group mt-5">
+    <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="~/ResulKara.jpg" height="170" width="150" />
+            </div>
+            <div class="col-md-8">
+                <div class="card-body ml-4">
+                    <h4 id="Unvan">Prof. Dr</h4>
+                    <h5>Resul Kara</h5>
+                    <a href="http://akademik.duzce.edu.tr/resulkara">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+                        </svg> resulkara@duzce.edu.tr
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>*@
+
+@foreach (var staff in Model)
+{
+
+<div class="card-group mt-5" style="float:left;">
+    <div class="card mb-3 " style="max-width: 400px;">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="~/@staff.Profile" height="170" width="140" />
+            </div>
+            <div class="col-md-8">
+                <div class="card-body ml-1">
+                    <h4 id="Unvan">@staff.Degree</h4>
+                    <h5>@staff.Name @staff.Surname</h5>
+                    <a href="@staff.Link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+                        </svg> @staff.Email
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    }
+
+    @*<div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="~/AliCalhan.jpg" height="170" width="150" />
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body ml-4">
+                            <h4 id="Unvan">Doç. Dr.</h4>
+                            <h5>Ali Çalhan</h5>
+                            <a href="http://akademik.duzce.edu.tr/alicalhan">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+                                </svg> alicalhan@duzce.edu.tr
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="card-group mt-5">
+
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="~/MuhammedEnesBayrakdar.jpg" height="170" width="150" />
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body ml-3">
+                            <h4 id="Unvan">Doç. Dr.</h4>
+                            <h5>Muhammed Enes Bayrakdar</h5>
+                            <a href="http://akademik.duzce.edu.tr/muhammedbayrakdar">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+                                </svg> muhammedbayrakdar@duzce.edu.tr
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="~/SerdarBirogul.jpg" height="170" width="150" />
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body ml-4">
+                            <h4 id="Unvan">Doç.</h4>
+                            <h5>Serdar Biroğul</h5>
+                            <a href="https://akademik.duzce.edu.tr/serdarbirogul">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+                                </svg> serdarbirogul@duzce.edu.tr
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="~/YusufAltun.jpg" height="170" width="150" />
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body ml-4">
+                            <h4 id="Unvan">Doç. Dr.</h4>
+                            <h5>Yusuf Altun</h5>
+                            <a href="http://akademik.duzce.edu.tr/yusufaltun">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+                                </svg> yusufaltun@duzce.edu.tr
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="card-group mt-5">
+
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="~/no-image.jpg" height="170" width="150" />
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body ml-3">
+                            <h4 id="Unvan">Dr. Öğr. Üyesi</h4>
+                            <h5>Ahmet Albayrak</h5>
+                            <a href="http://akademik.duzce.edu.tr/ahmetalbayrak">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+                                </svg> ahmetalbayrak@duzce.edu.tr
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="~/LeylaTekin.jpg" height="170" width="150" />
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body ml-4">
+                            <h4 id="Unvan">Dr. Öğr. Üyesi</h4>
+                            <h5>Leyla Tekin</h5>
+                            <a href="http://akademik.duzce.edu.tr/leylakuru">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+                                </svg> leylakuru@duzce.edu.tr
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="~/no-image.jpg" height="170" width="150" />
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body ml-4">
+                            <h4 id="Unvan">Dr. Öğr. Üyesi</h4>
+                            <h5>Esra Şatır</h5>
+                            <a href="http://akademik.duzce.edu.tr/esrasatir">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+                                </svg> esrasatir@duzce.edu.tr
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="card-group mt-5">
+
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="~/FatihKayaAlp.jpg" height="170" width="150" />
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body ml-3">
+                            <h4 id="Unvan">Dr. Öğr. Üyesi</h4>
+                            <h5>Fatih Kayaalp</h5>
+                            <a href="http://akademik.duzce.edu.tr/fatihkayaalp">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+                                </svg> fatihkayaalp@duzce.edu.tr
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="~/ArafatSenturk.jpg" height="170" width="150" />
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body ml-4">
+                            <h4 id="Unvan">Dr. Öğr. Üyesi</h4>
+                            <h5>Arafat Şentürk</h5>
+                            <a href="http://akademik.duzce.edu.tr/arafatsenturk">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+                                </svg> arafatsenturk@duzce.edu.tr
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="~/TunahanTimucin.jpg" height="170" width="150" />
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body ml-4">
+                            <h4 id="Unvan">Araş. Gör</h4>
+                            <h5>Tunahan Timuçin</h5>
+                            <a href="http://akademik.duzce.edu.tr/tunahantimucin">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+                                </svg> tunahantimucin@duzce.edu.tr
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>*@

@@ -1,0 +1,42 @@
+﻿@model DüWEB.Models.Staff
+
+@{
+    ViewData["Title"] = "StaffUpdate";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<h2 class="mt-4">Akademik Personel Güncelle</h2>
+
+<hr />
+@using (Html.BeginForm("GetStaff", "AdminStaff", FormMethod.Post))
+{
+    @Html.LabelFor(staff => staff.Id)
+    @Html.TextBoxFor(staff => staff.Id, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.LabelFor(staff => staff.Name)
+    @Html.TextBoxFor(staff => staff.Name, new { @class = "form-control" })
+    <br />
+
+    @Html.LabelFor(staff => staff.Surname)
+    @Html.TextBoxFor(staff => staff.Surname, new { @class = "form-control" })
+    <br />
+
+    @Html.LabelFor(staff => staff.Degree)
+    @Html.TextBoxFor(staff => staff.Degree, new { @class = "form-control" })
+    <br />
+
+    @Html.LabelFor(staff => staff.Email)
+    @Html.TextBoxFor(staff => staff.Email, new { @class = "form-control" })
+
+
+    @Html.LabelFor(staff => staff.Profile)
+    @Html.TextBoxFor(staff => staff.Profile, new { @class = "form-control" })
+
+
+    @Html.LabelFor(staff => staff.Link)
+    @Html.TextBoxFor(staff => staff.Link, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-secondary">Güncelle</button>
+}

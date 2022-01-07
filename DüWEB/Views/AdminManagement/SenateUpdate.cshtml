@@ -1,0 +1,32 @@
+﻿@model DüWEB.Models.Senate
+@{
+    ViewData["Title"] = "SenateUpdate";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 class="mt-4">Yönetim Kurulu Güncelle</h2>
+
+<hr />
+@using (Html.BeginForm("GetSenate", "AdminManagement", FormMethod.Post))
+{
+    @Html.LabelFor(senate => senate.Id)
+    @Html.TextBoxFor(senate => senate.Id, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.LabelFor(senate => senate.Name)
+    @Html.TextBoxFor(senate => senate.Name, new { @class = "form-control" })
+    <br />
+
+    @Html.LabelFor(senate => senate.Surname)
+    @Html.TextBoxFor(senate => senate.Surname, new { @class = "form-control" })
+    <br />
+
+    @Html.LabelFor(senate => senate.Title)
+    @Html.TextBoxFor(senate => senate.Title, new { @class = "form-control" })
+    <br />
+
+    @Html.LabelFor(senate => senate.Degree)
+    @Html.TextBoxFor(senate => senate.Degree, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-secondary">Güncelle</button>
+}

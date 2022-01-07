@@ -1,0 +1,106 @@
+﻿@using DüWEB.Models
+@model List<Senate>
+
+<h2>Rektör</h2>
+<div class="card mb-3">
+    <img src="~/Rektör.jpg" class="card-img-top">
+    <div class="card-body">
+        <h4>Rektör</h4>
+        <h5>Prof. Dr. Nigar Demircan ÇAKAR</h5>
+    </div>
+</div>
+<h3>Rektör Yardımcıları</h3>
+<div class="card-group">
+    <div class="card">
+        <img src="~/Rektöryrd.jpg" class="card-img-top" style="height:252px">
+        <div class="card-body">
+            <h4>Rektör Yardımcısı</h4>
+            <h5>Prof. Dr. İlhan GENÇ</h5>
+        </div>
+
+    </div>
+    <div class="card">
+        <img src="~/Rektöryrd2.jpg" class="card-img-top">
+        <div class="card-body">
+            <h4>Rektör Yardımcısı</h4>
+            <h5>Prof Dr. Mehmet Akif Öncü</h5>
+        </div>
+
+    </div>
+    <div class="card">
+        <img src="~/Rektöryrd3.jpg" class="card-img-top">
+        <div class="card-body">
+            <h4>Rektör Yardımcısı</h4>
+            <h5>Prof. Dr. İdris ŞAHİN</h5>
+        </div>
+    </div>
+</div>
+<h3>Genel Sekreter</h3>
+<div class="card mb-3 text-center">
+    <img src="~/Genelsekreter.jpg" class="card-img-top mx-auto" style="width:400px" >
+    <div class="card-body">
+        <h4>Genel Sekreter</h4>
+        <h5>Hasan Sadi ATEŞ</h5>
+    </div>
+</div>
+
+<h3>Senato</h3>
+<table class="table table-bordered mt-3">
+    <tr>
+        <th>Id</th>
+        <th>Görev</th>
+        <th>Ünvan</th>
+        <th>Ad</th>
+        <th>Soyad</th>
+
+
+    </tr>
+    
+        @foreach (var senate in Model)
+        {
+<tr>
+    <td>@senate.Id</td>
+    <td>@senate.Title</td>
+    <td>@senate.Degree</td>
+    <td>@senate.Name</td>
+    <td>@senate.Surname</td>
+</tr>
+        }
+
+
+
+
+</table>
+
+<h3>Yönetim Kurulu</h3>
+
+<table class="table table-bordered mt-3">
+    <tr>
+        <th>Id</th>
+        <th>Görev</th>
+        <th>Ünvan</th>
+        <th>Ad</th>
+        <th>Soyad</th>
+
+
+    </tr>
+
+    @foreach (var senate in Model)
+    {
+        if(senate.Name=="Zafer")
+        {
+            break;
+        }
+        <tr>
+            <td>@senate.Id</td>
+            <td>@senate.Title</td>
+            <td>@senate.Degree</td>
+            <td>@senate.Name</td>
+            <td>@senate.Surname</td>
+        </tr>
+    }
+
+
+
+
+</table>
